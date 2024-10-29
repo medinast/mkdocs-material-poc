@@ -40,7 +40,6 @@ While the Data Dictionary currently exists in Excel spreadsheets, there are effo
 !!! info
     The views in Snowflake are non-materialized, meaning each view will re-run the SQL query that generates it and display the current data when called.<br><br>Creating Snowflake views is necessary because people need to see the various pieces of data without having access to the actual tables where the data is housed.
     
-
 | View / Type Name | Scheduled Table Refresh Times | Description |
 | ---------------- | ----------------------------- | ----------- |
 | **(VW)** View        | Financial data updates as new data comes in from Velocity.<br>Non-financial data updates during the scheduled table refresh times.<br><br>**Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST     | Views that have "VW" in their name represent queries that are pulling data in near real-time. The data in these views are updated as the data in Velocity changes.<br><br>Non-financial related data changes (ie. address changes, phone number changes, e-correspondence/SCRA status changes, etc.) do not update automatically when changes to those pieces of data are made in Velocity. Changes to these pieces of information will only update in the Snowflake views during the refresh cycle each morning.             |
