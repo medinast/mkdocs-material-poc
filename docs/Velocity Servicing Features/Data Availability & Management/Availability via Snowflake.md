@@ -35,6 +35,15 @@ The Data Dictionary is a project with the primary goal of providing helpful desc
 
 While the Data Dictionary currently exists in Excel spreadsheets, there are efforts underway to move the existing data element descriptions into a DBT repository. Doing this would centralize the Data Dictionary for all users, allow data element descriptions to be updated in a live database, allow Snowflake users to access the Data Dictionary within Snowflake, and allow DBT users to see the relationships between data elements and the different views they are used in (otherwise known as their lineage).
 
+## Snowflake Views and Table Refresh Times
+
+!!! info
+    The views in Snowflake are non-materialized, meaning each view will re-run the SQL query that generates it and display the current data when called.<br><br>Creating Snowflake views is necessary because people need to see the various pieces of data without having access to the actual tables where the data is housed.
+    
+
 | View / Type Name | Scheduled Table Refresh Times | Description |
 | ---------------- | ----------------------------- | ----------- |
-| (VW) View        | Financial data updates as new data comes in from Velocity.<br>Non-financial data updates during the scheduled table refresh times.<br><br>**Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST     | Views that have "VW" in their name represent queries that are pulling data in near real-time. The data in these views are updated as the data in Velocity changes.<br>Non-financial related data changes (ie. address changes, phone number changes, e-correspondence/SCRA status changes, etc.) do not update automatically when changes to those pieces of data are made in Velocity. Changes to these pieces of information will only update in the Snowflake views during the refresh cycle each morning.             |
+| **(VW)** View        | Financial data updates as new data comes in from Velocity.<br>Non-financial data updates during the scheduled table refresh times.<br><br>**Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST     | Views that have "VW" in their name represent queries that are pulling data in near real-time. The data in these views are updated as the data in Velocity changes.<br><br>Non-financial related data changes (ie. address changes, phone number changes, e-correspondence/SCRA status changes, etc.) do not update automatically when changes to those pieces of data are made in Velocity. Changes to these pieces of information will only update in the Snowflake views during the refresh cycle each morning.             |
+| **(DS)** Daily snapshot | **Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST | Views that have "DS" in their name represent queries that are snapshotting data elements at a scheduled time, meaning the information is going to be accurate as of the time it was last queried. These views are built from AWS Glue (and Rivery) tables brought over nightly. |
+| **(RP)** Reports | **Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST | Views that have "RP" in their name are reporting views based off of "VW" and "DS" views. |
+| **(CRP)** Citizens reports | **Starts**: 5:00a UTC / 11:00p CST<br>**Ends**: 11:20a UTC / 5:20a CST | Views that have "CRP" in their name are the same as "RP" views, but are specific to Citizens. |
