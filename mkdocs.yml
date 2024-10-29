@@ -5,7 +5,7 @@ theme:
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/logo.png
+  logo: assets/Velocity_Icon.png
   favicon: assets/favicon.ico
   features:
     - navigation.footer
@@ -47,11 +47,4 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
-extra:
-  social:
-    - icon: simple/youtube
-      link: https://youtube.com/@james-willett
-    - icon: simple/linkedin
-      link: https://linkedin.com/in/willettjames
-
-copyright: Copyright &copy; 2024 James Willett
+copyright: Copyright &copy; 2024 Seth Medina
