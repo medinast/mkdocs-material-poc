@@ -18,7 +18,7 @@ The goal of a loan modification is to provide the borrower with more favorable t
 
 ## Workflow
 
-Velocity completes the following steps based on the loan modification settings when adding a loan modification.
+Velocity completes the following steps based on the loan modification settings when adding a loan modification:
 
 1. Functions performed to the loan when the corresponding options are configured for a Loan Modification setting:
 2. Mark the loan modification status as Processing.
@@ -34,7 +34,7 @@ Velocity completes the following steps based on the loan modification settings w
 7. Replay - if effectiveDate was in the past
 8. Capitalize interest.
 9. Reamortize the loan.
-10. If applicable to the loan mod: 
+10. If applicable to the loan mod:
     * An activity note is created
         * Type - Event
         * Activity - Loan Term Modified (example)
