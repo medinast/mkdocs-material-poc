@@ -27,7 +27,7 @@ DBT also acts as a data transformation tool, allowing users to take source data 
 
 Additionally, DBT serves as the central location for all of the Data Availability Team's column-level documentation. This documentation is currently being added as the DAT touches each column and/or works on new tickets and projects.
 
-To learn more about DBT, you can visit the DBT website.
+To learn more about DBT, you can visit the [DBT website](https://docs.getdbt.com/docs/introduction).
 
 ## What is the Data Dictionary?
 
