@@ -47,4 +47,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+extra_css:
+  - stylesheets/extra.css
+
 copyright: Copyright &copy; 2024 Seth Medina
