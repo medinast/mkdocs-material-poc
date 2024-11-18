@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://sitename.example/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Things%20we%20can%20do%20with%20MkDocs%20Material/admonitions/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Things%20we%20can%20do%20with%20MkDocs%20Material/code-examples/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Things%20we%20can%20do%20with%20MkDocs%20Material/content-tabs/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Things%20we%20can%20do%20with%20MkDocs%20Material/diagram-examples/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Velocity%20Servicing%20Features/Data%20Availability%20%26%20Management/Availability%20via%20Snowflake/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/Velocity%20Servicing%20Features/Loan%20Management/Loan%20Modifications/</loc>
+         <lastmod>2024-11-18</lastmod>
+    </url>
+</urlset>
